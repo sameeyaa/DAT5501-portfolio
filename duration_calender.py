@@ -2,12 +2,16 @@
  
 #import datetime function to input dates
 import datetime
-from datetime import date
+from datetime import datetime, date
 
-#ask user to input 2 different dates to work out the difference
-d1 = date(2005, 12, 11)
-d2 = date(2025, 10, 20)
-difference = d2 - d1
-print(difference.days)
+#date.today will mean the code will always be updated to use the present day it is being ran on
+today = date.today()
+print("Today's date:", today) #the date is formatted year-month-day (YYYY-MM-DD)
 
-#however, the difference from today should be worked out, hence the numpy library will need to be imported and datetime.today will need to be used
+#ask user to input the second date that they want to calculate the difference against
+input_str = input("Please enter the date you want to calculate from in the format (YYYY-MM-DD): ")
+date2 = datetime.strptime(input_str, "%Y-%m-%d").date()  #parse the string to format as a date
+
+#calculate the difference between the inputted date and today
+difference = (today - date2)
+print(difference)
