@@ -1,3 +1,5 @@
+#simple addition unit test
+
 import unittest
 from week_2 import add
 
@@ -8,3 +10,5 @@ class test(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+print("unit test successful")
