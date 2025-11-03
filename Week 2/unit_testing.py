@@ -12,3 +12,4 @@ if __name__ == '__main__':
     unittest.main()
 
 print("unit test successful")
+#check if the test runs successfully
