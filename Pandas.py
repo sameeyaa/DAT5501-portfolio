@@ -20,7 +20,11 @@ candidate_df = candidate_df.dropna(subset=["votes"])
 #plot the histogram
 plt.hist(candidate_df["votes"], bins=15)
 plt.xlabel("Number of Votes")
-plt.ylabel("Number of States")
+plt.ylabel("States")
 plt.title(f"Number of Votes for {chosen_candidate} by each State (2016)")
 plt.show()
+
+#check how many states there are to write for the plot
+print(df["state"].unique())
+
 
