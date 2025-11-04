@@ -16,3 +16,5 @@ date2 = datetime.strptime(input_str, "%Y-%m-%d").date()
 #calculate the difference between the inputted date and today
 difference = (today - date2)
 print(difference)
+
+#duration calender successfully works

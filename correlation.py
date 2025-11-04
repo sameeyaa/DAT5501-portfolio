@@ -94,3 +94,5 @@ for _, row in uk.iterrows():
 
 plt.tight_layout()
 plt.show(block=True)
+
+#graphs plotted and correlation coefficient given

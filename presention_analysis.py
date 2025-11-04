@@ -59,3 +59,5 @@ axes[1].grid(axis="y", linestyle="--", alpha=0.5)
 #print the graph
 plt.tight_layout()
 plt.show(block=True)
+
+#graphs successfully ran

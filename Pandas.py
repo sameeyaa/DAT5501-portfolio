@@ -13,7 +13,6 @@ chosen_candidate= "Carly Firiona"
 
 #filter the data to only select data to do with Carly Firiona
 candidate_df = df[df["candidate"]== chosen_candidate]
-
 #check if specific data is only presented
 print(candidate_df)
 
@@ -23,3 +22,4 @@ plt.xlabel(f"Number of Votes")
 plt.ylabel("Number of States")
 plt.title(f"Number of Votes for Carly Firiona by each State (2016)")
 plt.show()
+
