@@ -30,6 +30,11 @@ for n in n_values:
     end = time.perf_counter()
     T.append(end - start)
 
+#attempt plotting nlog(n) curve
+    nlogn = n_values * np.log(n_values)
+    curve = nlogn/ nlogn.max() * max(T)
+
+
 #plotting the graph
 plt.figure(figsize = (12, 8))
 plt.plot( n_values, T, label = 'Measured Sort Time', color = 'pink')
