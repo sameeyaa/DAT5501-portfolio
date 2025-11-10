@@ -11,7 +11,7 @@ df['Close'] = df['Close'].astype(str).str.replace(',' , '').astype(float)
 prices = df['Close'].values
 change_in_p = np.diff(prices)
 
-n_values = np.arrange(7, len(change_in_p) + 1)
+n_values = np.arange(7, len(change_in_p) + 1)
 T = []
 
 for n in n_values:
