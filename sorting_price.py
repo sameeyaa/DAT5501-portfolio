@@ -33,7 +33,6 @@ for n in n_values:
 #plotting the graph
 plt.figure(figsize = (12, 8))
 plt.plot( n_values, T, label = 'Measured Sort Time', color = 'pink')
-plt.plot(n_values, curve, label = 'Expected nlog(n) (scaled)', color = 'green')
 plt.xlabel( 'Number of Daily Changes (n)', fontsize = 12)
 plt.ylabel( 'Sort time (seconds)', fontsize = 12)
 plt.title( 'Sorting Time vs Daily Price Changes for NVIDIA', fontsize = 15)
