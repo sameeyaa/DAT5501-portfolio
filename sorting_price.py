@@ -13,7 +13,7 @@ df = df.sort_values('Date') #make the dates ascending in order
 #convert 'Close' column to number format to enable line plotting
 df['Close'] = df['Close'].astype(str).str.replace(',', '').astype(float)
 
-#calculate the change in price everyday for 318 days
+#calculate the change in price everyday for 365 days
 prices = df['Close'].values
 change_in_P = np.diff(prices)
 
