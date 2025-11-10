@@ -24,4 +24,12 @@ for n in n_values:
     nlogn = n_values * np.log(n_values)
     nlogn_scaled = nlog / nlogn.max * max(T)
 
-    
+    #plot the graph
+    plt.figure(figsize = (10, 6))
+    plt.plot(n_values, T, label='Measured sort time')
+    plt.plot(n_values, nlogn_scaled, '--', label = 'n log n scaled')
+    plt.xlabel('n (number of daily changes)')
+    plt.ylabel('Time to sort(seconds)')
+    plt.title('Sorting Time vs Daily Price changes')
+    plt.legend()
+    plt.show
