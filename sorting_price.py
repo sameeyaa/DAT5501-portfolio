@@ -41,6 +41,7 @@ plt.plot( n_values, T, label = 'Measured Sort Time', color = 'pink')
 plt.xlabel( 'Number of Daily Changes (n)', fontsize = 12)
 plt.ylabel( 'Sort time (seconds)', fontsize = 12)
 plt.title( 'Sorting Time vs Daily Price Changes for NVIDIA', fontsize = 15)
+plt.plot (curve, label = 'nlog(n)', color = 'orange')
 
 plt.legend()
 plt.tight_layout()
