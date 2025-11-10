@@ -22,7 +22,7 @@ for n in n_values:
     T.append (end - start)
 
     nlogn = n_values * np.log(n_values)
-    nlogn_scaled = nlog / nlogn.max * max(T)
+    nlogn_scaled = nlogn / nlogn.max() * max(T)
 
     #plot the graph
     plt.figure(figsize = (10, 6))
