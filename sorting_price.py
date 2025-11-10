@@ -20,5 +20,20 @@ change_in_P = np.diff(prices)
 #segment the data into portions to analyse sort time as n increases
 n_values = np.arange(8, len(change_in_P) + 1)
 
+#Initially have T blank so that it starts from no times recorded
+T = []
+
+for n in n_values:
+    sample = change_in_P [:n] 
+    start = time.perf_counter() 
+    sorted(sample)
+    end = time.perf_counter()
+    T.append(end - start)
+
+#plot an expected nlogn curve to compare fairly
+nlogn = n_values * np.log(n_values)
+curve = nlogn/ nlogn.max() * max(T) #will match measured range
+
+#plotting the graph
 
 
