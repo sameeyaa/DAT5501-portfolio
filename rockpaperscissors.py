@@ -34,4 +34,10 @@ def play_game():
     computer_option = get_computer_option()
     print(f" The computer has picked {computer_option}.")
 
-    
+    result = get_winner(player_option, computer_option)
+    if result == "It's a draw! Play again.":
+        print ("It's a draw! Play again.")
+    elif result == "player":
+        print ("You have won!")
+    else:
+        print("The coputer wins! You lose!")
