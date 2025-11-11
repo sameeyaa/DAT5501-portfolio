@@ -3,13 +3,14 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
-
+#call the files from my laptop
 disorders_path = '/Users/sameeyaali/Desktop/mental disorders data.csv'
 working_path = '/Users/sameeyaali/Desktop/working hours.csv'
 
 disorders = pd.read_csv(disorders_path)
 working = pd.read_csv(working_path)
 
+#select the data relevant to what I am analysing and the date range I have chosen
 filtered = disorders[
     (disorders["cause_name"] == "Mental disorders") &
     (disorders["age_name"] == "All ages") &
@@ -26,12 +27,13 @@ pivot_df = filtered.pivot_table(
     aggfunc="sum"
 ).reset_index()
 
-
+#rename columns for easier layout and easier to write code
 working = working.rename(columns={
     "Entity": "location_name",
     "Year": "year",
     "Working hours per worker": "working_hours"
 })
+
 
 working = working[working["location_name"].isin(["China", "United Kingdom"])]
 working = working[working["year"].between(2011, 2019)]
