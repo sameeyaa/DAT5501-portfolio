@@ -2,7 +2,7 @@ import random
 
 options =  ["rock" , "paper", "scissors"]
 
-def get_game_choice():
+def get_computer_option():
 #randomise which option the computer chooses
     return random.choice(options)
 
@@ -27,3 +27,11 @@ def get_winner(player_option, coomputer_option):
         return " You have won!"
     else:
         return "The coputer wins! You lose!"
+
+#playing a game with the computer
+def play_game():
+    player_option = input("Please choose rock, paper or scissors: ").strip().lower()
+    computer_option = get_computer_option()
+    print(f" The computer has picked {computer_option}.")
+
+    
