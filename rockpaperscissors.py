@@ -16,3 +16,14 @@ def get_winner(player_option, coomputer_option):
     
     if player_option == coomputer_option:
         return "It's a draw! Play again."
+    
+    winner = {
+        "rock" : "scissors",
+        "paper" : "rocks",
+        "scissors" : "paper"
+    }
+
+    if winner[player_option] == coomputer_option:
+        return " You have won!"
+    else:
+        return "The coputer wins! You lose!"
