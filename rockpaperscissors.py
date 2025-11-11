@@ -14,3 +14,5 @@ def get_winner(player_option, coomputer_option):
     if player_option not in options or coomputer_option not in options:
         raise ValueError("Invalid input! Please pick 'rock', 'paper' or 'scissors")
     
+    if player_option == coomputer_option:
+        return "It's a draw! Play again."
