@@ -41,3 +41,6 @@ def play_game():
         print ("You have won!")
     else:
         print("The coputer wins! You lose!")
+
+get_computer_option()
+play_game()
