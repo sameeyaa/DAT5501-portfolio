@@ -44,3 +44,5 @@ def play_game():
 
 get_computer_option()
 play_game()     
+
+#game successfully runs
