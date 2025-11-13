@@ -9,7 +9,7 @@ def get_computer_option():
 #Dictate the winner of a match
 def get_winner(player_option, coomputer_option):
     player_option = player_option.lower()
-    coomputer_option = compile.lower()
+    coomputer_option = coomputer_option.lower()
 
     if player_option not in options or coomputer_option not in options:
         raise ValueError("Invalid input! Please pick 'rock', 'paper' or 'scissors")
