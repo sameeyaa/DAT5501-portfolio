@@ -40,7 +40,7 @@ def play_game():
     elif result == "player":
         print ("You have won!")
     else:
-        print("The coputer wins! You lose!")
+        print("The computer wins! You lose!")
 
 get_computer_option()
 play_game()     
