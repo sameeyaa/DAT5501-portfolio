@@ -3,7 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-df = pd.read_csv('/Users/sameeyaali/Downloads/NVIDIA CORPORATION (08-05-2024 _ 11-07-2025).csv')
+#create a dataframe using csv file
+df = pd.read_csv('NVIDIA CORPORATION (08-05-2024 _ 11-07-2025).csv')
 print(df) #display the csv file to see data layout
 df.head
 
