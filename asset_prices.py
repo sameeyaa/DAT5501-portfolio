@@ -37,6 +37,17 @@ april_df = (df['Date'] >= '2025-04-01') & (df['Date'] <= '2025-04-30')
 april_df = df.loc[april_df]
 print(april_df)
 
+#may
+may_df = (df['Date'] >= '2025-05-01') & (df['Date'] <= '2025-05-31')
+may_df = df.loc[may_df]
+print(may_df)
+
+#june
+june_df = (df['Date'] >= '2025-06-01') & (df['Date'] <= '2025-06-30')
+june_df = df.loc[june_df]
+print(june_df)
+
+
 
 
 
