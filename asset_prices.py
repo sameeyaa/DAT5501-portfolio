@@ -47,6 +47,15 @@ june_df = (df['Date'] >= '2025-06-01') & (df['Date'] <= '2025-06-30')
 june_df = df.loc[june_df]
 print(june_df)
 
+#july
+july_df = (df['Date'] >= '2025-07-01') & (df['Date'] <= '2025-07-31')
+july_df = df.loc[july_df]
+print(july_df)
+
+#august 
+august_df = (df['Date'] >= '2025-08-01') & (df['Date'] <= '2025-08-31')
+august_df = df.loc[august_df]
+print(august_df)
 
 
 
