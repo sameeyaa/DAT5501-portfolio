@@ -18,4 +18,8 @@ print(life_expectancy_df.head())
 life_expectancy_df.rename(columns = {'Period life expectancy at birth' : 'Life expectancy at birth'}, inplace = True)
 print(life_expectancy_df.head())
 
-#masking the data for a specific
+#masking the data for a specific timeframe
+mask1 = life_expectancy_df['Year'] >= 1923
+mask2 = life_expectancy_df['Year'] <= 2023
+
+
