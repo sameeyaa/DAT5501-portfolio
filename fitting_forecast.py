@@ -49,6 +49,8 @@ def poly():
         plt.scatter(years, cym_life_expectancy['Life expectancy at birth'], label='Data points', color='blue')
         plt.plot(xp, p(xp), label= f'order {i}', linewidth=2)
         plt.show()
+    #plotting chi-squared
+    
 
 def polyall():
     plt.figure(figsize=(12, 7))
