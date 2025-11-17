@@ -17,8 +17,16 @@ print(df.head())
 
 #seperate each month in the year into a data frame
 #focusing on January 2025 - November 2025 as there is no December 2025 data
+#january
 january_df = (df['Date'] >= '2025-01-01') & (df['Date'] <= '2025-01-31')
 january_df = df.loc[january_df]
-january_df['day'] = january_df['Date'].dt.day
+print(january_df)
+
+#february
+february_df = (df['Date'] >= '2025-02-01') & (df['Date'] <= '2025-02-28')
+february_df = df.loc[february_df]
+print(february_df)
+
+
 
 
