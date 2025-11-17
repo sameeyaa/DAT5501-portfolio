@@ -57,6 +57,22 @@ august_df = (df['Date'] >= '2025-08-01') & (df['Date'] <= '2025-08-31')
 august_df = df.loc[august_df]
 print(august_df)
 
+#september
+september_df = (df['Date'] >= '2025-09-01') & (df['Date'] <= '2025-09-30')
+september_df = df.loc[september_df]
+print(september_df)
+
+#october
+october_df = (df['Date'] >= '2025-10-01') & (df['Date'] <= '2025-10-31')
+october_df = df.loc[october_df]
+print(october_df)
+
+#november
+november_df = (df['Date'] >= '2025-11-01') & (df['Date'] <= '2025-11-30')
+november_df = df.loc[november_df]
+print(november_df)
+
+
 
 
 
