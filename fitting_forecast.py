@@ -26,3 +26,9 @@ first_range = life_expectancy_df[mask1]
 range_life_expectancy_df = first_range[mask2]
 print(range_life_expectancy_df.head())
 
+#set the variables for the polynomial graph
+# x axis = Year    y axis = Life expectancy at birth
+years = range_life_expectancy_df['Year']
+#years_centered = years - years.mean()
+life_expectancy = range_life_expectancy_df['Life expectancy at birth']
+
