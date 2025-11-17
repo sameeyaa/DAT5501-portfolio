@@ -1,0 +1,105 @@
+﻿measure_id,measure_name,location_id,location_name,sex_id,sex_name,age_id,age_name,cause_id,cause_name,metric_id,metric_name,year,val,upper,lower
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2012,7.783271309234232,14.85134468148204,0.8626788935557071
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2012,19.77846940554789,29.545359152422044,11.452746727183897
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2012,164661.92616615637,354098.34076886973,76795.30322761045
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2012,251442.89206857517,568473.1868505283,91330.79791320537
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2011,17121.99022258416,31767.025389755945,10013.903877103996
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2011,29701.937277046753,63555.11444433869,12335.448831983624
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2011,0.33916697401966595,0.5370826405749466,0.065413273
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2011,11.027912181256758,19.724789420677972,4.6518011069235845
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2015,8.664753234074931,15.591661833389738,0.8942738756435052
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2015,19.37560690187195,30.54163116053328,11.366181768499324
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2014,19566.967123411618,36304.27526868562,11157.00858217712
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2014,31835.130648845985,67054.09138590623,13547.534533198172
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2014,0.096641741,0.46579113629489505,0.0420906
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2014,10.013241470263443,19.703585464035235,4.653073492088167
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2015,186488.94740937348,394840.83663176786,83939.80836891057
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2015,286316.8497825546,634477.0193425248,102655.10957853944
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2014,176039.8745196369,372267.2309875296,79301.46324357485
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2014,271726.1964641415,600515.9077,99202.47385947227
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2011,157001.93136454961,333659.17219492473,73992.43943
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2011,242754.57627782726,554332.9785242821,89716.99490347196
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2013,19136.42735841223,35502.19367044996,11006.028942920106
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2013,31964.993677944072,67694.11973930484,13415.048614803647
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2013,0.089277758,0.45825166895165476,0.036828633
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2013,10.581739281440514,19.80825598680911,4.681812136
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2011,7.292400554117045,15.115130404278796,0.8807330641756224
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2011,19.28382197900036,28.644424576055393,11.238000218207334
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2014,8.522402072391783,14.90776408721868,0.8892777644384708
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2014,19.616202877427845,32.26064579653284,10.606977216485248
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2013,167111.40761616925,355764.54289383907,77249.28686699632
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2013,256658.51036338427,569326.9443016656,94629.19220339137
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2012,18261.87486278055,33858.543,10616.140334724285
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2012,31352.166127272994,66774.32977121115,13096.12818640466
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2012,0.19546048067074068,0.485667804,0.065827688
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2012,11.259822228261154,20.00507523979661,4.718450868003028
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2013,8.017937059613583,14.919388854122458,0.8524437257356583
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2013,19.862888185573606,31.26715943635654,11.405460955488406
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2015,20818.707673559373,38569.05931392724,11844.379321048293
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2015,33707.04620449318,71720.72245442522,14405.407240530534
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2015,0.058095167,0.40232023520405996,0.016045108
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2015,10.297404964103944,20.185182268190857,4.754355821153528
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2019,8.995390097937594,17.343966942095026,0.9961904221607591
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2019,19.713252975894598,33.05052955435801,10.562065092449643
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2019,225736.71422940886,480798.51195797627,101102.09432931841
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2019,347199.0685934749,782670.1420476958,122440.45629860713
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2017,21659.304908428578,39719.83664112532,12566.703324834201
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2017,34068.23585220008,72261.62984747661,14748.27045281951
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2017,0.15635588834343647,0.4880311758367865,0.063600383
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2017,10.722965774232579,20.407005201346244,4.828787870171734
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2018,9.053630717975926,17.063789054556068,0.9782592894309526
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2018,19.60763698310075,30.876273648884723,10.962115590439309
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2016,20969.38718898418,38617.753655846325,12100.492254724282
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2016,33148.693425965044,70044.37811604948,14349.462077766546
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2016,0.06515724,0.41669681242038836,0.021059857
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2016,10.198769168020506,20.441453232365536,4.779313118236253
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2018,219776.22793329597,464421.9104033587,99715.09812396666
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2018,338069.29734514107,769454.0434582296,117512.61488335393
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2020,22541.040383216234,40867.01228894121,13499.720441993706
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2020,34813.42252943466,73995.11722899362,15376.370451581635
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2020,0.4567791402010181,0.6860432672715016,0.063628742
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2020,13.212262224044446,21.280265174908106,5.110176435836805
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2017,211757.1656030489,440205.90886220953,98302.09083232148
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2017,324662.83222180064,714318.1412308894,113099.57170530705
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2016,8.783011333543676,15.925150073531107,0.9090431125770765
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2016,19.255057727218414,30.592518266381997,11.868090420786702
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2021,8.735665799278497,19.419714447621736,1.0017050967522456
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2021,19.835321461700634,36.65097449062603,9.313227018
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2017,9.004335125905516,16.530083342054763,0.9710398695411964
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2017,19.449594210860933,31.00685668302396,11.432382288543877
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2020,238053.01232969543,500429.592,104962.4204870633
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2020,365587.8672004433,795258.3926454876,128306.96289427318
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2021,273334.9573623802,576734.4079479437,120382.12377249131
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2021,411184.18593906786,908538.6438,144216.7436251275
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2016,200699.71198425037,420414.2415319467,91148.89220069129
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2016,306968.2684,667741.3686,109245.58904801037
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2020,8.786271845313118,17.956397559329325,1.0038676513861953
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2020,19.615489645079883,34.02165708645759,9.669703623407843
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2022,8.784524094,20.429732848382187,1.0727564001177574
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2022,20.883822741953683,42.72209647922925,9.170110361092162
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2019,22150.914425987947,40135.488800764564,13104.944319306445
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2019,34329.850810262324,72432.95506277888,15022.809522911764
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2019,0.4170695190833072,0.649388788,0.064708866
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2019,11.11677415821821,20.309814801289928,4.856075911183117
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2018,21971.51195670084,40150.61984842362,12895.74856643258
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2018,34598.08555,73314.09754,15077.344357647653
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2018,0.3049347695534749,0.4918218863903483,0.068232731
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2018,10.913334622389463,20.395337602389763,4.894765123460918
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2022,296702.96879893116,637074.5191111311,127586.4084
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2022,445407.74767186044,1003286.9031085998,151475.07841041137
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2023,25278.39444010847,44839.072465887395,15539.976647292517
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2023,36884.88129433067,76372.98143277611,17013.690449454207
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2023,0.1642277153457304,0.424865865,0.046165087
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2023,14.852372459470912,25.435540758911163,5.237149266134967
+1,Deaths,6,China,1,Male,22,All ages,558,Mental disorders,1,Number,2023,7.913090211784848,18.320185797885056,1.0139693037246214
+1,Deaths,6,China,2,Female,22,All ages,558,Mental disorders,1,Number,2023,19.339245766740838,45.79205696,8.047664853382436
+1,Deaths,6,China,1,Male,22,All ages,542,Neurological disorders,1,Number,2023,283929.5155157217,564733.7451202013,121883.83200248498
+1,Deaths,6,China,2,Female,22,All ages,542,Neurological disorders,1,Number,2023,439452.6165848686,953858.3040516503,159279.6180077921
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2022,23903.52464347705,43239.99068723013,14335.741972211112
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2022,35846.376447514616,75259.16672030748,16095.385141543611
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2022,0.1651042264280782,0.4225348443939471,0.048161405
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2022,14.888324863285556,24.614708537516613,5.198197887288914
+1,Deaths,95,United Kingdom,1,Male,22,All ages,542,Neurological disorders,1,Number,2021,22412.23546885249,40703.24219763191,13361.735163568921
+1,Deaths,95,United Kingdom,2,Female,22,All ages,542,Neurological disorders,1,Number,2021,34117.92699761302,72152.46110341333,15194.274854470495
+1,Deaths,95,United Kingdom,1,Male,22,All ages,558,Mental disorders,1,Number,2021,0.303597422,0.48505958782125685,0.062917135
+1,Deaths,95,United Kingdom,2,Female,22,All ages,558,Mental disorders,1,Number,2021,14.486122054083916,23.77868856056668,5.210622577671587

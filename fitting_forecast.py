@@ -50,6 +50,7 @@ def poly():
         plt.plot(xp, p(xp), label= f'order {i}', linewidth=2)
         plt.show()
     #plotting chi-squared
+    
 
 
 def polyall():

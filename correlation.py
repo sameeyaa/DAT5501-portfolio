@@ -4,8 +4,8 @@ import seaborn as sns
 import numpy as np
 
 #call the files from my laptop
-disorders_path = '/Users/sameeyaali/Desktop/mental disorders data.csv'
-working_path = '/Users/sameeyaali/Desktop/working hours.csv'
+disorders_path = 'mental disorders data.csv'
+working_path = 'working hours.csv'
 
 disorders = pd.read_csv(disorders_path)
 working = pd.read_csv(working_path)
