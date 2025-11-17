@@ -1,8 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt  # will help create graphs
 
-#load the dataset
-df = pd.read_csv('/Users/sameeyaali/Downloads/US-2016-primary.csv', delimiter=";")
+#load the dataset and convert into a dataframe
+df = pd.read_csv('US-2016-primary.csv', delimiter=";")
 
 print(df.columns)  # names of all the columns
 
