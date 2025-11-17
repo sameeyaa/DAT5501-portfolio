@@ -22,4 +22,7 @@ print(life_expectancy_df.head())
 mask1 = life_expectancy_df['Year'] >= 1923
 mask2 = life_expectancy_df['Year'] <= 2023
 
+first_range = life_expectancy_df[mask1]
+range_life_expectancy_df = first_range[mask2]
+print(range_life_expectancy_df.head())
 
