@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-#pull my data in from my relevant pathways on my laptop
-file_path = '/Users/sameeyaali/Desktop/mental disorders data.csv'
+#call the csv file to clean it
+file_path = 'mental disorders data.csv'
 data = pd.read_csv(file_path)
 
 #clean the data to ensure only data from 2011-2019 is collected
