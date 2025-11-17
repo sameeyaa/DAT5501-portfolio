@@ -15,63 +15,6 @@ print(df.head())
 df['Date'] = pd.to_datetime(df['Date'])
 print(df.head())
 
-#seperate each month in the year into a data frame
-#focusing on January 2025 - November 2025 as there is no December 2025 data
-#january
-january_df = (df['Date'] >= '2025-01-01') & (df['Date'] <= '2025-01-31')
-january_df = df.loc[january_df]
-print(january_df)
-
-#february
-february_df = (df['Date'] >= '2025-02-01') & (df['Date'] <= '2025-02-28')
-february_df = df.loc[february_df]
-print(february_df)
-
-#march
-march_df = (df['Date'] >= '2025-03-01') & (df['Date'] <= '2025-03-31')
-march_df = df.loc[march_df]
-print(march_df)
-
-#april
-april_df = (df['Date'] >= '2025-04-01') & (df['Date'] <= '2025-04-30')
-april_df = df.loc[april_df]
-print(april_df)
-
-#may
-may_df = (df['Date'] >= '2025-05-01') & (df['Date'] <= '2025-05-31')
-may_df = df.loc[may_df]
-print(may_df)
-
-#june
-june_df = (df['Date'] >= '2025-06-01') & (df['Date'] <= '2025-06-30')
-june_df = df.loc[june_df]
-print(june_df)
-
-#july
-july_df = (df['Date'] >= '2025-07-01') & (df['Date'] <= '2025-07-31')
-july_df = df.loc[july_df]
-print(july_df)
-
-#august 
-august_df = (df['Date'] >= '2025-08-01') & (df['Date'] <= '2025-08-31')
-august_df = df.loc[august_df]
-print(august_df)
-
-#september
-september_df = (df['Date'] >= '2025-09-01') & (df['Date'] <= '2025-09-30')
-september_df = df.loc[september_df]
-print(september_df)
-
-#october
-october_df = (df['Date'] >= '2025-10-01') & (df['Date'] <= '2025-10-31')
-october_df = df.loc[october_df]
-print(october_df)
-
-#november
-november_df = (df['Date'] >= '2025-11-01') & (df['Date'] <= '2025-11-30')
-november_df = df.loc[november_df]
-print(november_df)
-
 #plot whole year closing price vs date
 plt.figure (figsize = (16,8))
 plt.plot(df['Date'],
@@ -81,7 +24,7 @@ plt.plot(df['Date'],
 
 plt.xlabel('Date', fontsize = 12)
 plt.ylabel('Closing Price ($)', fontsize = 12)
-plt.title = ("Tesla Inc 2025 Closing Price vs Date")
+plt.title ("Tesla Inc 2025 Closing Price vs Date", fontsize = 16)
 plt.legend()
 plt.tight_layout
 plt.show()
