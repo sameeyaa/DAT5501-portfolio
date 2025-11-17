@@ -39,7 +39,7 @@ years = cym_life_expectancy['Year']
 #years_centered = years - years.mean()
 life_expectancy = range_life_expectancy_df['Life expectancy at birth']
 
-xp = np.linspace(1923, 2023, 300)
+xp = np.linspace(1923, 2023 + 10, 300)
 degree = 10
 
 def poly():
@@ -51,4 +51,15 @@ def poly():
         plt.plot(xp, p(xp), label= f'order {i}', linewidth=2)
         plt.show()
 
-poly()
+def polyall():
+    plt.figure(figsize=(12, 7))
+    plt.scatter(years, cym_life_expectancy['Life expectancy at birth'], label='data points')
+    for i in range(1, degree):
+        coefficients = np.polyfit(years, cym_life_expectancy['Life expectancy at birth'], i)
+        p = np.poly1d(coefficients)
+        plt.plot(xp, p(xp), label=f'order {i}', linewidth=2)
+
+    plt.show()
+
+
+polyall()
