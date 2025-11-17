@@ -24,10 +24,14 @@ plt.plot(df['Date'],
 
 plt.xlabel('Date', fontsize = 12)
 plt.ylabel('Closing Price ($)', fontsize = 12)
-plt.title ("Tesla Inc 2025 Closing Price vs Date", fontsize = 16)
+plt.title ("Tesla Inc 2025 Stock Closing Price vs Date", fontsize = 16)
 plt.legend()
 plt.tight_layout
 plt.show()
+
+#calculate daily percentage change
+df['Daily Percentage Change'] = df['Close'].pct_change() * 100
+
 
 
 
