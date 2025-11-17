@@ -72,6 +72,21 @@ november_df = (df['Date'] >= '2025-11-01') & (df['Date'] <= '2025-11-30')
 november_df = df.loc[november_df]
 print(november_df)
 
+#plot whole year closing price vs date
+plt.figure (figsize = (16,8))
+plt.plot(df['Date'],
+         df['Close'],
+         linewidth = 2,
+         label = 'Closing Price')
+
+plt.xlabel('Date', fontsize = 12)
+plt.ylabel('Closing Price ($)', fontsize = 12)
+plt.title = ("Tesla Inc 2025 Closing Price vs Date")
+plt.legend()
+plt.tight_layout
+plt.show()
+
+
 
 
 
