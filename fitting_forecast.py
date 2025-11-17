@@ -21,7 +21,7 @@ print(life_expectancy_df.head())
 
 #masking the data for a specific timeframe
 mask1 = life_expectancy_df['Year'] >= 1940
-mask2 = life_expectancy_df['Year'] <= 2023
+mask2 = life_expectancy_df['Year'] <= 2023  #expanding range in order to make predictions
 
 first_range = life_expectancy_df[mask1]
 range_life_expectancy_df = first_range[mask2]
@@ -50,7 +50,7 @@ def poly():
         plt.plot(xp, p(xp), label= f'order {i}', linewidth=2)
         plt.show()
     #plotting chi-squared
-    
+
 
 def polyall():
     plt.figure(figsize=(12, 7))
