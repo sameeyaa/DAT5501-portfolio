@@ -57,7 +57,11 @@ def polyall():
         coefficients = np.polyfit(years, cym_life_expectancy['Life expectancy at birth'], i)
         p = np.poly1d(coefficients)
         plt.plot(xp, p(xp), label=f'order {i}', linewidth=2)
-
+    
+    plt.xlabel('Years')
+    plt.ylabel('Life Expectancy')
+    plt.title('Life Expectancy at Birth in Cayman Islands')
+    plt.legend()
     plt.show()
 
 
