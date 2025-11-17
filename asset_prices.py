@@ -27,6 +27,16 @@ february_df = (df['Date'] >= '2025-02-01') & (df['Date'] <= '2025-02-28')
 february_df = df.loc[february_df]
 print(february_df)
 
+#march
+march_df = (df['Date'] >= '2025-03-01') & (df['Date'] <= '2025-03-31')
+march_df = df.loc[march_df]
+print(march_df)
+
+#april
+april_df = (df['Date'] >= '2025-04-01') & (df['Date'] <= '2025-04-30')
+april_df = df.loc[april_df]
+print(april_df)
+
 
 
 
