@@ -32,7 +32,22 @@ plt.show()
 #calculate daily percentage change
 df['Daily Percentage Change'] = df['Close'].pct_change() * 100
 
+#plot the percentage change against date
+plt.figure(figsize = (16,8))
+plt.plot( df['Date'],
+         df['Daily Percentage Change'],
+         linewidth = 2,
+         label = 'Daily Percentage Change',
+         color = 'pink')
 
+plt.xlabel('Date' , fontsize = 12 )
+plt.ylabel('Daily Percentage Change', fontsize = 12)
+plt.title("Tesla Inc 2025 Stock Annual Daily Percentage Change", fontsize = 16)
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+#why does my percentage change go into minus?
 
 
 
