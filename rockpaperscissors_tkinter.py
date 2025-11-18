@@ -34,4 +34,6 @@ tk.Label(root, text = "Pick rock, paper or scissors:", font = ("Calibri", 14))
 button_frame = tk.Frame(root)
 button_frame.pack()
 
-
+tk.Button(button_frame, text = "rock", width = 10, command = lambda: play("rock")).grid(row = 0, column = 0, padx = 5)
+tk.Button(button_frame, text = "paper", width = 10, command = lambda: play("paper")).grid(row = 0, column = 1, padx = 5)
+tk.Button(button_frame, text = "scissors", width = 10, command = lambda: play("paper")).grid(row = 0, column = 2, padx = 5)
