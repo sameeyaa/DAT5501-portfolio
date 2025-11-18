@@ -30,3 +30,8 @@ root.title("Rock, Paper, Scissors")
 
 #creating the header of the game
 tk.Label(root, text = "Pick rock, paper or scissors:", font = ("Calibri", 14))
+
+button_frame = tk.Frame(root)
+button_frame.pack()
+
+
