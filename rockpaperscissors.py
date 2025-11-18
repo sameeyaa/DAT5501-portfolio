@@ -7,26 +7,26 @@ def get_computer_option():
     return random.choice(options)
 
 #Dictate the winner of a match
-def get_winner(player_option, coomputer_option):
+def get_winner(player_option, computer_option):
     player_option = player_option.lower()
-    coomputer_option = coomputer_option.lower()
+    computer_option = computer_option.lower()
 
-    if player_option not in options or coomputer_option not in options:
+    if player_option not in options or computer_option not in options:
         raise ValueError("Invalid input! Please pick 'rock', 'paper' or 'scissors")
     
-    if player_option == coomputer_option:
+    if player_option == computer_option:
         return "It's a draw! Play again."
     
     winner = {
         "rock" : "scissors",
-        "paper" : "rocks",
+        "paper" : "rock",
         "scissors" : "paper"
     }
 
-    if winner[player_option] == coomputer_option:
-        return " You have won!"
+    if winner[player_option] == computer_option:
+        return "player"
     else:
-        return "The coputer wins! You lose!"
+        return "The computer wins! You lose!"
 
 #playing a game with the computer
 def play_game():
