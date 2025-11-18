@@ -17,4 +17,9 @@ def get_winner(player_option, computer_option):
         "paper" : "rock",
         "scissors" : "paper"
     }
-    
+
+   #if player or computer win
+    if winner[player_option] == computer_option:
+        return "player"
+    else:
+        return "computer"
