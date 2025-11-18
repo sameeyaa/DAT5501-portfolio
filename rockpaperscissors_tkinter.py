@@ -25,7 +25,7 @@ def get_winner(player_option, computer_option):
         return "computer"
 
 #create a GUI
-root = tk.Tk
+root = tk.Tk()
 root.title("Rock, Paper, Scissors")
 
 #creating the header of the game
