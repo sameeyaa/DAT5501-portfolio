@@ -68,7 +68,24 @@ class DigitalPet:
             print(f"{self.name} is too tired and does not want to exercise.")
             self.speak("I'm tired! I need a nap...")
     
+    #playing interaction
+    #happiness will increase by 3 and energy will reduce by 2 and hunger will reduce by 1
+    def play(self):
+        if self.energy >0:
+            self.happiness += 3
+            self.energy -=2
+            self.hunger -= 1
+            self.interactions.append("played")
+            print(f"You played with {self.name}!")
+            self.speak("I love playing with you! Your my bestfriend.")
+        else:
+            print(f"{self.name} is feeling tired and doesn't want to play.")
+            self.speak("i'm feeling sleepy...")
+            #owner promped to put pet to sleep
     
+    
+
+
                   
 
 
