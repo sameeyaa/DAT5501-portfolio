@@ -1,5 +1,6 @@
 #I am creating a digital pet, similar to a Tamagochi, which can be nurtured 
 #The pet will be able to be fed, played with and also put to bed
+#Pet will engage with owner throughout the game
 
 class DigitalPet:
     def __init__(self, name):
@@ -41,5 +42,16 @@ class DigitalPet:
             print(f"{self.name} is sleeping.")
         else:
             print(f"{self.name} is already asleep.")
+    
+    #waking interaction
+    def wake_up(self):
+        #when pet wakes up energy will reset to 10
+        if self.sleeping:
+            self.sleeping = False
+            self.energy += 10
+            print(f"You woke {self.name} up.")
+            self.speak("I'm awake!")
+        else:
+            print(f"{self.name} is awake.")
     
     
