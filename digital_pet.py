@@ -31,4 +31,15 @@ class DigitalPet:
             else:
                 print(f"{self.name} is already full and cannot eat anymore!")
 
-
+    #sleeping interaction
+    def sleep(self):
+        if not self.sleeping:
+            self.sleeping = True
+            self.energy += 3  #energy will increase by 3 when pet has slept
+            if self.energy > 10:
+                self.energy = 10  #ensures energy does not exceed the max of 10
+            print(f"{self.name} is sleeping.")
+        else:
+            print(f"{self.name} is already asleep.")
+    
+    
