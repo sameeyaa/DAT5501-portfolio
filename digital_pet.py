@@ -54,4 +54,21 @@ class DigitalPet:
         else:
             print(f"{self.name} is awake.")
     
+    #exercise interaction
+    #when pet exercises, happiness will increase by 1 and energy decreases by 3, hunger decreases by 2
+    def exercise(self):
+        if self.energy > 1:
+            self.happiness +=1 
+            self.energy  -= 3
+            self.hunger -= 2
+            self.interactions.append("exercised")
+            print(f"You made {self.name} exercise.")
+            self.speak("Ooof, what a workout!")
+        else:
+            print(f"{self.name} is too tired and does not want to exercise.")
+            self.speak("I'm tired! I need a nap...")
     
+    
+                  
+
+
