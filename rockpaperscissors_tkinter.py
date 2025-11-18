@@ -37,3 +37,11 @@ button_frame.pack()
 tk.Button(button_frame, text = "rock", width = 10, command = lambda: play("rock")).grid(row = 0, column = 0, padx = 5)
 tk.Button(button_frame, text = "paper", width = 10, command = lambda: play("paper")).grid(row = 0, column = 1, padx = 5)
 tk.Button(button_frame, text = "scissors", width = 10, command = lambda: play("paper")).grid(row = 0, column = 2, padx = 5)
+
+computer_label = tk.Label(root, text = "", font = ("Calibri" , 14))
+computer_label.pack(pady = 10)
+
+result_label = tk.Label(root, text = "", font = ("Calibri", 18))
+result_label.pack(pady = 10)
+
+root.mainloop()
