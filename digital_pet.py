@@ -135,7 +135,38 @@ class DigitalPet:
             elif self.happiness > 8:
                 self.speak("I am sooo happy hehe!")   #pet shows its emotions regularly
         
+
+ #create the actual digital pet
+ #give owner the option to personalise their pet
+def main():
+    pet_name = input("What would you like to call your pet?")
+    pet_type = input("What animal is your pet?")
+    pet = DigitalPet(pet_name)
+
+#ask owner to initiate what to do with the pet
+    while True:
+        task = input("\nPlease enter what you would like to do? (feed,play/exercise/sleep/wake/quit)")
+
+        if task == 'feed':
+            pet.feed()
+        elif task == 'play':
+            pet.play()
+        elif task == 'exercise':
+            pet.exercise()
+        elif task == 'sleep':
+            pet.sleep()
+        elif task == 'wake':
+            pet.wake_up()
+        elif task == 'quit':
+            print("goodbye...")
+            break
+        else:
+            print("Error. Invalid Input.")
         
+        pet.tick()
+        pet.vitals()
+
+main()
             
 
 
