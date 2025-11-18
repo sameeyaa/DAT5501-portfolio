@@ -34,11 +34,11 @@ def play(player_choice):
     else:
         result_label.config(text="Computer wins!")
 
-# ---- GUI ----
+#user interface
 
-root = tk.Tk()     # <-- FIXED
+root = tk.Tk()     
 root.title("Rock, Paper, Scissors")
-root.geometry("350x250")
+root.geometry("350x350")
 
 tk.Label(root, text="Pick rock, paper or scissors:", font=("Calibri", 14)).pack(pady=10)
 
