@@ -83,7 +83,9 @@ class DigitalPet:
             self.speak("i'm feeling sleepy...")
             #owner promped to put pet to sleep
     
-    
+    #enable the pet to interact with owner to create a connection
+    def speak(self,speech):
+        print(f"{self.name} says: \"{speech}\"")
 
 
                   
