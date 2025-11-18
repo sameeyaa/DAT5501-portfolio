@@ -99,7 +99,44 @@ class DigitalPet:
               """)
         print(" past interactions: ", self.interactions)
 
-    
+    #stimulate time and change pet vitals
+    def tick(self):
+        if not self.sleeping:
+            self.hunger -= 1
+            self.energy -=2
+            self.age += 0.5
+
+            #setting the range of vitals scale
+            if self.hunger >10:
+                self.hunger = 10
+            if self.hunger < 0 :
+                self.hunger = 0
+                self.speak("I am very very hungry!")
+            if self.hunger < 4:
+                self.happiness -=1
+                self.speak("I am getting hungry...")
+            if self.energy <0:
+                self.energy = 0
+                self.speak("I am drained! I want to sleep.")
+                self.happiness -= 2
+            if self.energy > 10:
+                self.energy = 10
+            if self.energy > 7:
+                self.speak("I am very active!")   #when energy is above 7 pet will imply its ready to play or exercise
+            if self.energy > 7:
+                self.happiness += 2       #happiness increases by 2
+            if self.happiness < 0:
+                self.happiness = 0        #min happiness= 0 pet will initiate a response from owner
+                self.speak("I am very unhappy!")
+            if self.happiness > 10:
+                self.happiness = 10       #hapiness max=10
+            if self.happiness < 3:
+                self.speak("I am feeling sad...")    #pet will let owner know if happiness is rapidly reducing
+            elif self.happiness > 8:
+                self.speak("I am sooo happy hehe!")   #pet shows its emotions regularly
+        
+        
+            
 
 
                   
