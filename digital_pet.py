@@ -87,6 +87,20 @@ class DigitalPet:
     def speak(self,speech):
         print(f"{self.name} says: \"{speech}\"")
 
+    #display pet vitals to pick what to do with pet
+    def vitals(self):
+        state = "sleeping" if self.sleeping else "awake"
+        print(f"""{self.name}'s vitals:
+              State: {state},
+              Energy: {self.energy},
+              Happiness: {self.happiness},
+              Hunger: {self.hunger},
+              Age: {self.age} years old.
+              """)
+        print(" past interactions: ", self.interactions)
+
+    
+
 
                   
 
