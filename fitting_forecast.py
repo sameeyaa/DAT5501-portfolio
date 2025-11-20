@@ -41,28 +41,37 @@ life_expectancy = range_life_expectancy_df['Life expectancy at birth']
 xp = np.linspace(1940, 2023 + 10, 300)
 degree = 10
 
+#Plot Chi-Squared for the best fitting line
 def poly():
-    for i in range(1, degree):
+    chi_list = []
+    chi_reduced_list = []
+    orders = list(range(1, degree))
+    
+    for i in orders:
         coefficients = np.polyfit(years, cym_life_expectancy['Life expectancy at birth'], i)
         p = np.poly1d(coefficients)
 
-        #centre the x values for a better central scale
-        years_centered = years = years.mean()
-        #predicted y value
-        y_pred = p(years_centered)
-
-        #observed value
+        years_centered = years - years.mean()
         y_obs = cym_life_expectancy['Life expectancy at birth']
+        y_pred = p(years)
 
         chi_squared = np.sum((y_obs - y_pred) ** 2)
+        dof = len(years) - (i + 1)
+        chi_reduced = chi_squared / dof
 
-        plt.figure(figsize = (12,6))
-        plt.scatter(years, y_obs, label = 'Data Points', color = 'pink')
-        plt.plot(xp, p(xp), label = f'order {i} | Chi-suared = {chi-squared:.2f}')
-        plt.xlabel("Year")
-        plt.ylabel("Life Expectancy at birth in Cayman Islands")
-        plt.legend()
-        plt.show()
+        chi_list.append(chi_squared)
+        chi_reduced_list.append(chi_reduced)
+
+    #plot graph
+    plt.figure(figsize = (12, 6))
+    plt.plot(orders, chi_reduced_list, marker = "o")
+    plt.xlabel("Polynomial degree")
+    plt.ylabel("Reduced Chi-Square")
+    plt.title("Model Fit vs Polynomial Order")
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+
 
 
 def polyall():
@@ -80,6 +89,6 @@ def polyall():
     plt.show()
 
 
+
 polyall()
-
-
+poly()
