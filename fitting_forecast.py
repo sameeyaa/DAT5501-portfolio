@@ -45,12 +45,24 @@ def poly():
     for i in range(1, degree):
         coefficients = np.polyfit(years, cym_life_expectancy['Life expectancy at birth'], i)
         p = np.poly1d(coefficients)
-        plt.figure(figsize=(10,6))
-        plt.scatter(years, cym_life_expectancy['Life expectancy at birth'], label='Data points', color='blue')
-        plt.plot(xp, p(xp), label= f'order {i}', linewidth=2)
+
+        #centre the x values for a better central scale
+        years_centered = years = years.mean()
+        #predicted y value
+        y_pred = p(years_centered)
+
+        #observed value
+        y_obs = cym_life_expectancy['Life expectancy at birth']
+
+        chi_squared = np.sum((y_obs - y_pred) ** 2)
+
+        plt.figure(figsize = (12,6))
+        plt.scatter(years, y_obs, label = 'Data Points', color = 'pink')
+        plt.plot(xp, p(xp), label = f'order {i} | Chi-suared = {chi-squared:.2f}')
+        plt.xlabel("Year")
+        plt.ylabel("Life Expectancy at birth in Cayman Islands")
+        plt.legend()
         plt.show()
-    #plotting chi-squared
-    
 
 
 def polyall():
@@ -69,3 +81,5 @@ def polyall():
 
 
 polyall()
+
+
