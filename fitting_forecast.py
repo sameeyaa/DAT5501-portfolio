@@ -89,6 +89,18 @@ def polyall():
     plt.show()
 
 
+#polyall()
+#poly()
 
-polyall()
-poly()
+#plot a bayesion information criterion graph to model test
+#BIC = x^2 + Np In(N0)
+#N0 = number of observations
+#Np = number of parameters
+
+def model_selection():
+    orders = list(range(1, degree))
+    chi_reduced_list = []
+    bic_list = []
+
+    n = len(years)
+
