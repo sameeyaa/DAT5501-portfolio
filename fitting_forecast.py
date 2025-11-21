@@ -46,6 +46,7 @@ def poly():
     chi_list = []
     chi_reduced_list = []
     orders = list(range(1, degree))
+    bic_list = []
     
     for i in orders:
         coefficients = np.polyfit(years, cym_life_expectancy['Life expectancy at birth'], i)
@@ -62,7 +63,13 @@ def poly():
         chi_list.append(chi_squared)
         chi_reduced_list.append(chi_reduced)
 
-    #plot graph
+        #BIC = -2ln(L^) + kln(n)
+        p_parameters = i + 1
+        bic = len(years) * np.log(chi_squared / len(years)) + p_parameters * np.log(len(years))
+        bic_list.append(bic)
+
+
+    #plot graph for chi-squared
     plt.figure(figsize = (12, 6))
     plt.plot(orders, chi_reduced_list, marker = "o")
     plt.xlabel("Polynomial degree")
@@ -71,6 +78,17 @@ def poly():
     plt.grid(True)
     plt.legend()
     plt.show()
+
+    #plot graph for bic 
+    plt.subplot(2,3,5)
+    plt.plot(orders, bic_list, marker = "o", color = "green")
+    plt.title("BIC vs Polynomial Order")
+    plt.xlabel("Polynomial Order")
+    plt.ylabel("BIC")
+    plt.grid(True)
+    plt.show()
+    plt.legend()
+    plt.tight_layout()
 
 
 
@@ -89,18 +107,13 @@ def polyall():
     plt.show()
 
 
-#polyall()
-#poly()
+polyall()
+poly()
+
 
 #plot a bayesion information criterion graph to model test
 #BIC = x^2 + Np In(N0)
 #N0 = number of observations
 #Np = number of parameters
-
-def model_selection():
-    orders = list(range(1, degree))
-    chi_reduced_list = []
-    bic_list = []
-
-    n = len(years)
+#add bic into the for loop
 
