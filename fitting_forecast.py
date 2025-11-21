@@ -80,7 +80,7 @@ def poly():
     plt.show()
 
     #plot graph for bic 
-    plt.subplot(2,3,5)
+    plt.subplot(1,1,1)
     plt.plot(orders, bic_list, marker = "o", color = "green")
     plt.title("BIC vs Polynomial Order")
     plt.xlabel("Polynomial Order")
