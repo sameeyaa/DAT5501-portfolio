@@ -18,10 +18,18 @@ class Participant:
         self.role = role
 
 class Stage:
-    def __innit__(self, name, length):
+    def __init__(self, name, length):
         self.name = name
         self.length = length
         self.workstreams = []
         self.attendees = []
 
-        
+class Workstream:
+    def __init__(self,name):
+        self.name = name
+        self.attendees = []
+
+    def add_attendee(self, participant):
+        self.attendees.append(participant)
+
+      
