@@ -135,3 +135,44 @@ def create_folders_and_notes():
                         for attendee in meeting['attendees']:
                             file.write(f" - {attendees}\n")
     print("Folders as well as meeting notes have been created.")
+
+
+#collect information for project
+def collect_project_info():
+    num_participants = int(input("How many individuals are in this project?"))
+    for _ in range(num_participants):
+        name = input("What is the name of the participant?")
+        role = input(f"What is {name}'s role in this project?")
+        participant = Participant(name, role)
+        project['participants'].append(participant)
+        project['roles'][name] = role
+    
+    num_stages = int(input("How many stages are in the project?"))
+    for _ in range(num_stages):
+        stage_name = input("Enter the stage name: ")
+        stage_length = int(input(f"How long is the stage {stage_name} (in days)? "))
+        stage = Stage(stage_name, stage_length)
+        project['stages'][stage_name] = stage
+
+    for stage_name, stage in project['stages'].items():
+        num_attendees = int(input(f"How many participants are in stage {stage_name}? "))
+        for _ in range(num_attendees):
+            attendee_name = input(f"Enter participant name for stage {stage_name}: ")
+            if attendee_name in project['roles']:
+                participant = next(ppt for ppt in project['participants'] if ppt.name == attendee_name)
+                stage.add_attendee(participant)
+
+    for stage_name, stage in project['stages'].items():
+        num_workstreams = int(input(f"How many workstreams are in stage {stage_name}? "))
+        for _ in range(num_workstreams):
+            workstream_name = input(f"Enter workstream name for stage {stage_name}: ")
+            workstream = Workstream(workstream_name)
+            stage.add_workstream(workstream)
+
+            num_participants_in_ws = int(input(f"How many participants are in workstream {workstream_name}? "))
+            for _ in range(num_participants_in_ws):
+                participant_name = input(f"Enter participant name for workstream {workstream_name}: ")
+                if participant_name in project['roles']:
+                    participant = next(ppt for ppt in project['participants'] if ppt.name == participant_name)
+                    workstream.add_attendee(participant)
+    print("Project data has been collected.")
