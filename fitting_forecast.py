@@ -36,7 +36,7 @@ print(cym_life_expectancy.head())
 print(range_life_expectancy_df.head())
 years = cym_life_expectancy['Year']
 #years_centered = years - years.mean()
-life_expectancy = range_life_expectancy_df['Life expectancy at birth']
+y_obs = cym_life_expectancy['Life expectancy at birth']
 
 xp = np.linspace(1940, 2023 + 10, 300)
 degree = 10
@@ -116,4 +116,6 @@ poly()
 #N0 = number of observations
 #Np = number of parameters
 #add bic into the for loop
+
+
 
