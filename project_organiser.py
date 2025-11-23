@@ -32,4 +32,9 @@ class Workstream:
     def add_attendee(self, participant):
         self.attendees.append(participant)
 
-      
+#create a csv file to store data
+def create_csv():
+    with open('project_information.csv', mode = 'w', line = '') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Name', 'Role', 'Stage Name', 'Workstream Name', 'Meeting Date'])
+    print("CSV file 'project_information.csv' has been created.")
