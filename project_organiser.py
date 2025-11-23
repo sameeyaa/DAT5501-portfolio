@@ -71,3 +71,16 @@ def load_from_csv():
             print("Details have been loaded from CSV.")
     except FileNotFoundError:
         print("Error! Cannot find the CSV file, please provide one.")
+
+# save information collected onto the CSV
+def save_to_csv():
+    with open('project_information.csv', mode = 'w', newline = '') as file:
+        writer = csv.writer(file)
+        writer.writerrow(['Name', 'Role', 'Stage Name', 'Workstream Name', 'Meeting Date'])
+        for stage_name, stage in project['stages'].items():
+            for workstream in stage.workstreams:
+                for participant in stage.attendees:
+                    meeting_dates = [meeting['date'] for meeting in project['meetings'] if meeting['stage'] == stage_name and meeting['workstream'] == workstream.name]
+                    for participant in stage.attendees:
+                        writer.writerow([participant.name, participant.role,stage_name, workstream.name,", ".join(meeting_dates)])
+    print("Details of the project have successfully been saved to 'project_information.csv'.")
