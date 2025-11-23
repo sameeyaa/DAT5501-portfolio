@@ -106,7 +106,7 @@ def polyall():
     plt.legend()
     plt.show()
 
-
+ 
 polyall()
 poly()
 
@@ -116,6 +116,3 @@ poly()
 #N0 = number of observations
 #Np = number of parameters
 #add bic into the for loop
-
-
-
