@@ -176,3 +176,20 @@ def collect_project_info():
                     participant = next(ppt for ppt in project['participants'] if ppt.name == participant_name)
                     workstream.add_attendee(participant)
     print("Project data has been collected.")
+
+#collect the date of the meeting and what the subject of the meeting is
+def collect_meeting_info():
+    num_meetings = int(input("How many meetings are in this project?"))
+    for _ in range(num_meetings):
+        meeting_date = input("When is this meeting? (DD-MM-YY)")
+        stage_name = input(f"Which stage will the meeting on {meeting_date} be in regard to?")
+        workstream_name = input(f"Which workstream will be discussed in the meeting on {meeting_date}?")
+        attendees = input(" Enter who will be attending the meeting as a list").split(',')
+        meeting_info = {
+            'date': meeting_date,
+            'stage': stage_name,
+            'workstream': workstream_name,
+            'attendees': [attendee.strip() for attendee in attendees]
+        }
+        project['meetings'].append(meeting_info)
+    print("Meeting information has been recorded.")
