@@ -109,3 +109,29 @@ def create_excel_doc():
                         ws.append(row)
         wb.save("project_details.xlsx")  #save workbook
         print("An Excel file named 'project_details.xlsx' has been created.")
+
+#create a folder as well as meeting notes
+def create_folders_and_notes():
+    project_folder = "project_data"
+    os.makedirs(project_folder, exists_ok = True)
+    
+    for stage_name, stage in project['stages'].items():
+        stage_folder = os.path.join(project_folder, stage_name)
+        os.makedirs(stage_folder, exists_ok = True)
+        
+        for workstream in stage.workstreams:
+            workstream_folder = os.path.join(stage_folder, workstream.name)
+            os.makedirs(workstream_folder, exist_ok = True)
+
+            for meeting in project['meetings']:
+                if meeting['stage'] == stage_name and meeting['workstream'] == workstream.name:
+                    filename = f"{meeting['date']}.md"
+                    file_path = os.path.join(workstream_folder, filename)
+                    with open(file_path, 'w') as file:
+                        file.write(f"# Meeting Date: {meeting['date']}\n")
+                        file.write(f"# Stage: {meeting['stage']}\n")
+                        file.write(f"# Workstream: {meeting['workstream']}\n")
+                        file.write(f"# Attendees:\n")
+                        for attendee in meeting['attendees']:
+                            file.write(f" - {attendees}\n")
+    print("Folders as well as meeting notes have been created.")
