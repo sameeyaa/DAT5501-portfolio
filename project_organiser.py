@@ -84,3 +84,28 @@ def save_to_csv():
                     for participant in stage.attendees:
                         writer.writerow([participant.name, participant.role,stage_name, workstream.name,", ".join(meeting_dates)])
     print("Details of the project have successfully been saved to 'project_information.csv'.")
+
+#create an excel file to store project info
+def create_excel_doc():
+    wb = openpyxl.Workbook()     #creates a new workbook
+    ws = wb.active               #creates a new sheet in workbook
+    ws.title = "Project Details"
+    #add sections to the excel sheet
+    sections = ['Name', 'Role', 'Stage Name', 'Workstream Name', 'Meeting Date']
+    ws.append(sections)
+    
+    for stage_name, stage in project['stages'].items():
+        for workstream in stage.workstreams:
+            for meeting in project['meetings']:
+                if meeting['stage'] == stage_name and meeting['workstream'] == workstream.name:
+                    for participant in stage.attendees:
+                        row = [
+                            participant.name,
+                            participant.role,
+                            stage_name,
+                            workstream.name,
+                            meeting['date']
+                        ]
+                        ws.append(row)
+        wb.save("project_details.xlsx")  #save workbook
+        print("An Excel file named 'project_details.xlsx' has been created.")
