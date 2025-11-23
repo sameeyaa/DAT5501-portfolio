@@ -76,7 +76,7 @@ def load_from_csv():
 def save_to_csv():
     with open('project_information.csv', mode = 'w', newline = '') as file:
         writer = csv.writer(file)
-        writer.writerrow(['Name', 'Role', 'Stage Name', 'Workstream Name', 'Meeting Date'])
+        writer.writerow(['Name', 'Role', 'Stage Name', 'Workstream Name', 'Meeting Date'])
         for stage_name, stage in project['stages'].items():
             for workstream in stage.workstreams:
                 for participant in stage.attendees:
@@ -274,3 +274,13 @@ def update_details():
     
     elif choice == '8':
         print("all project information can be found in the folders and files.")
+
+#run code
+load_from_csv()
+save_to_csv()
+create_excel_doc()
+create_folders_and_notes()
+collect_project_info()
+collect_project_info()
+collect_meeting_info()
+update_details()
