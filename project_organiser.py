@@ -193,3 +193,84 @@ def collect_meeting_info():
         }
         project['meetings'].append(meeting_info)
     print("Meeting information has been recorded.")
+
+#if the employer wants to update some details
+def update_details():
+    print("\nWhat do you want to update?")
+    print("1. Add a new participant")
+    print("2. Edit an existing participant")
+    print("3. Add a new stage")
+    print("4. Edit an existing stage")
+    print("5. Add a new workstream")
+    print("6. Edit current workstream")
+    print("7. Add a new meeting")
+    print("8. Nothing")
+    
+    choice = input("Please choose from 1-8")
+    if choice == '1':
+        name = input("Enter participant's name:")
+        role = input(f"What is {name}'s role in this project?")
+        participant = Participant(name,role)
+        project['participants'].append(participant)
+        project['roles'][name] = role
+    
+    elif choice == '2':
+        participant_name = input("Enter the participant name you would like to edit:")
+        if participant_name in project['roles']:
+            new_role = input(f"Enter what {participant_name}'s new role is:")
+            project['roles'][participant_name] = new_role
+        else:
+            print("Member not registered!")
+    
+    elif choice == '3':
+        stage_name = input("What is this stage called?")
+        stage_length = int(input(f"How long is the stage {stage_name} (in days)? "))
+        stage = Stage(stage_name, stage_length)
+        project['stages'][stage_name] = stage
+
+    elif choice == '4':
+        stage_name = input("Enter the stage name you would like to edit: ")
+        if stage_name in project['stages']:
+            new_length = int(input(f"Enter the new length (in days) for stage {stage_name}: "))
+            project['stages'][stage_name].length = new_length
+        else:
+            print("Error! Stage cannot be found!")
+    
+    
+
+    elif choice == '5':
+        stage_name = input("Enter stage name for the new workstream: ")
+        if stage_name in project['stages']:
+            workstream_name = input(f"Enter new workstream name for stage {stage_name}: ")
+            workstream = Workstream(workstream_name)
+            project['stages'][stage_name].add_workstream(workstream)
+        else:
+            print("Stage cannot be found!")
+    
+    elif choice == '6':
+        stage_name = input("Enter the stage name where the workstream exists: ")
+        if stage_name in project['stages']:
+            workstream_name = input(f"Enter the workstream name that you would like to edit in stage {stage_name}: ")
+            workstream = next((ws for ws in project['stages'][stage_name].workstreams if ws.name == workstream_name), None)
+            if workstream:
+                new_name = input(f"Enter the new name for the workstream {workstream_name}: ")
+                workstream.name = new_name
+            else:
+                print("Workstream cannot be located.")
+        else:
+            print("Stage can not be found!")
+    
+    elif choice == '7':
+        meeting_date = input("What is the date of the meeting (DD-MM-YYYY): ")
+        stage_name = input(f"Which stage is the meeting for? ")
+        workstream_name = input(f"Which workstream is a subject in the meeting? ")
+        attendees = input("Enter attendees as a list ").split(',')
+        meeting_info = {
+            'date': meeting_date,
+            'stage': stage_name,
+            'workstream': workstream_name,
+            'attendees': [attendee.strip() for attendee in attendees]
+        }
+    
+    elif choice == '8':
+        print("all project information can be found in the folders and files.")
