@@ -38,3 +38,36 @@ def create_csv():
         writer = csv.writer(file)
         writer.writerow(['Name', 'Role', 'Stage Name', 'Workstream Name', 'Meeting Date'])
     print("CSV file 'project_information.csv' has been created.")
+
+#load information about the project from csv
+def load_from_csv():
+    try:
+        with open('project_information.csv', mode = 'r' , newline = '') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                participant_name = row['Name']
+                participant_role = row['Role']
+                stage_name = row['Stage Name']
+                workstream_name = ['Workstream Name']
+                meeting_date = row ['Meeting Date']
+                
+                #add a participant to the details if not already mentioned
+                if participant_name not in project ['roles']:
+                    participant = Participant(participant_name, participant_role)
+                    project['participants'].append(participant)
+                    project['roles'][participant_name] = participant_role
+                
+                #add workstreams into the stages
+                stage = project['stages'][stage_name]
+                workstream = Workstream(workstream_name)
+                if workstream_name not in [ws.name for ws in stage.workstreams]:
+                    stage.add_workstream(workstream)
+            
+                
+                #add the meeting dates
+                if meeting_date:
+                    meeting_details = {'date': meeting_date, 'stage': stage_name, 'workstream': workstream_name}
+                    project['meetings'].append(meeting_details)
+            print("Details have been loaded from CSV.")
+    except FileNotFoundError:
+        print("Error! Cannot find the CSV file, please provide one.")
