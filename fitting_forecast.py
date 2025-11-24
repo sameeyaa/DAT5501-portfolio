@@ -116,3 +116,6 @@ poly()
 #N0 = number of observations
 #Np = number of parameters
 #add bic into the for loop
+
+#For your best model, what are the parameter values and covariance matrix?
+#What are the uncertainties in your parameter values?
