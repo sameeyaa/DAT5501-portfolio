@@ -17,5 +17,8 @@ print(iris.metadata)
 # variable information 
 print(iris.variables) 
 
-#set the target sppecies we are looking at
+#set the target species we are looking at
 le = LabelEncoder()
+le.fit(y.iloc[:, 0])
+y_encoded = le.transform(y.iloc[:, 0])
+
