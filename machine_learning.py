@@ -1,3 +1,4 @@
+
 from ucimlrepo import fetch_ucirepo 
   
 # fetch dataset 
@@ -12,3 +13,5 @@ print(car_evaluation.metadata)
   
 # variable information 
 print(car_evaluation.variables) 
+
+
