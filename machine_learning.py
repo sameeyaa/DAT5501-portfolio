@@ -25,3 +25,13 @@ y_encoded = le.transform(y.iloc[:, 0])
 #train the decision tree
 clf = DecisionTreeClassifier(max_depth= 3, random_state= 50)
 clf.fit(X, y_encoded)
+
+#plot decision tree
+plt.figure(figsize = (14, 8))
+plot_tree(clf,
+         feature_names= X.columns,
+          class_names= le.classes_,
+           filled = True,
+            rounded = True,
+             fontsize = 12 )
+plt.show()
