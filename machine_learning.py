@@ -27,6 +27,7 @@ for col in X.columns:
     X_encoded[col] = le.fit_transform(X[col])
     label_encoders[col] = le
 
+y_encoded = LabelEncoder().fit_transform(y.iloc[:, 0])
 
 
 
