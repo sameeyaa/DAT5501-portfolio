@@ -1,4 +1,8 @@
 #Calendar Printer
+#implementing tkinter to advance my code 
+
+import tkinter as tk
+from tkinter import ttk
 
 def calendar_printer():
     # Input function to enter number of days in the month
@@ -34,4 +38,35 @@ def calendar_printer():
 calendar_printer()
 
 #printer successfully runs
+
+#create a GUI
+root = tk.Tk()
+root.title("Calender Printer")
+root.geometry("600x400")
+
+title_label = tk.Label(root, text = "Calender Printer", font = ("Calibri, 14"))
+title_label.pack(pady = 10)
+
+frame = tk.Frame(root)
+frame.pack()
+
+#ask for the number of days
+tk.Label(frame, text = "Days on Month:").grid(row = 0, column = 0, sticky = "w")
+days_entry = tk.Entry(frame, width = 10)
+days_entry.grid(row = 0, column = 1)
+
+#ask for the start day of the month
+tk.Label(frame, text = "Enter Start Day (0 = Sunday .... 6 = Saturday)").grid(row = 1, column = 0, sticky = "w")
+start_day_input = tk.Entry(frame, width = 10)
+start_day_input.grid(row = 1, column = 1)
+
+#create buttons to press options
+create_button = tk.Button(root, text = "Create Calender", command = calendar_printer)
+create_button.pack(pady = 10)
+
+#calender display
+output_label = tk.Label(root, text = "", font = ("Calibri", 12), justify = "left")
+output_label.pack()
+
+root.mainloop()
 
