@@ -189,6 +189,13 @@ class VisualPet:
         self.vitals_label = tk.Label(root, text = self.pet.vitals_text(), font = ("Calibri", 14))
         self.vitals_label.pack(pady = 15)
 
+        #create option buttons
+        tk.Button(root, text = "Feed", command = self.feed_pet).pack()
+        tk.Button(root, text = "Exercise", command = self.exercise_pet).pack()
+        tk.Button(root, text = "Play", command = self.play_pet).pack()
+        tk.Button(root, text = "Sleep", command = self.pet_sleep).pack()
+        tk.Button(root, text = "Wake Up", command = self.pet_wake).pack()
+
         
 
 
