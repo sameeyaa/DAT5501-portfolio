@@ -220,6 +220,15 @@ class VisualPet:
             messagebox.showinfo("Pet", self.pet.wake_up())
             self.update_vitals()
 
-            
+         #constantly update the vitals to pets current status
+        def update_vitals(self):
+            self.vitals_label.config(text = self.pet.vitals_text())
+
+        #make the tick repeated
+        def update_tick(self):
+            self.pet.tick()
+            self.update_vitals()
+            self.root.after(5000, self.update_loop)
+
 
 
