@@ -1,6 +1,8 @@
 #I am creating a digital pet, similar to a Tamagochi, which can be nurtured 
 #The pet will be able to be fed, played with and also put to bed
 #Pet will engage with owner throughout the game
+#to advance my code, I will use tkinter to create a user interface
+
 
 class DigitalPet:
     def __init__(self, name):
