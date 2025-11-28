@@ -182,12 +182,11 @@ class VisualPet:
         root.title("Digital Pet")
 
         #ask user what they would like to name the pet
-        pet_name = "Pet"
-        self.pet = DigitalPet(pet_name)
+        self.pet = DigitalPet({self.name})
 
         #show vitals
         self.vitals_label = tk.Label(root, text = self.pet.vitals_text(), font = ("Calibri", 14))
-        self.vitals_label.pack(pady = 15)
+        self.vitals_label.pack(pady = 10)
 
         #create option buttons
         tk.Button(root, text = "Feed", command = self.feed_pet).pack()
@@ -197,7 +196,7 @@ class VisualPet:
         tk.Button(root, text = "Wake Up", command = self.pet_wake).pack()
 
         #set a tick for the pet to age
-        self.update_loop()
+        self.update_tick()
 
         #connecting buttons to the correct function
         def feed_pet(self):
@@ -230,5 +229,8 @@ class VisualPet:
             self.update_vitals()
             self.root.after(5000, self.update_loop)
 
-
+#call the visual pet function
+root = tk.Tk()
+app = VisualPet(root)
+root.mainloop()
 
