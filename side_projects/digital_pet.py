@@ -196,6 +196,30 @@ class VisualPet:
         tk.Button(root, text = "Sleep", command = self.pet_sleep).pack()
         tk.Button(root, text = "Wake Up", command = self.pet_wake).pack()
 
-        
+        #set a tick for the pet to age
+        self.update_loop()
+
+        #connecting buttons to the correct function
+        def feed_pet(self):
+            messagebox.showinfo("Pet", self.pet.feed())
+            self.update_vitals()
+
+        def play_pet(self):
+            messagebox.showinfo("Pet", self.pet.play())
+            self.update_vitals()
+
+        def exercise_pet(self):
+            messagebox.showinfo("Pet", self.pet.exercise())
+            self.update_vitals()
+
+        def pet_sleep(self):
+            messagebox.showinfo("Pet", self.pet.sleep())
+            self.update_vitals()
+
+        def pet_wake_up(self):
+            messagebox.showinfo("Pet", self.pet.wake_up())
+            self.update_vitals()
+
+            
 
 
