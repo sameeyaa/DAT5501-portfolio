@@ -185,5 +185,10 @@ class VisualPet:
         pet_name = "Pet"
         self.pet = DigitalPet(pet_name)
 
+        #show vitals
+        self.vitals_label = tk.Label(root, text = self.pet.vitals_text(), font = ("Calibri", 14))
+        self.vitals_label.pack(pady = 15)
+
+        
 
 
