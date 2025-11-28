@@ -1,9 +1,6 @@
 #Calendar Printer
 #implementing tkinter to advance my code 
 
-import tkinter as tk
-from tkinter import ttk
-
 def calendar_printer():
     # Input function to enter number of days in the month
     days_in_month = int(input("How many days are in the month? "))
@@ -19,8 +16,6 @@ def calendar_printer():
 
 
     #Create blank spaces to the dates map out nicely and fall under each day in the header and are not joined together
-    calendar_text += "   " * day_month_starts
-    counter += day_month_starts
     for _ in range(day_month_starts):
         print("   ", end="")
         counter += 1
@@ -37,10 +32,8 @@ def calendar_printer():
 
     print()  
 
-    output_label.config(text = calender_text)
-
 #Run the calendar printer
-#calendar_printer()
+calendar_printer()
 
 #printer successfully runs
 
