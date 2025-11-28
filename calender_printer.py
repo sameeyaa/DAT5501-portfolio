@@ -1,40 +1,61 @@
-#Calendar Printer
-#implementing tkinter to advance my code 
+import tkinter as tk
+from tkinter import ttk
 
 def calendar_printer():
-    # Input function to enter number of days in the month
-    days_in_month = int(input("How many days are in the month? "))
+    try:
+        days_in_month = int(days_entry.get())
+        day_month_starts = int(start_day_input.get())
+    except ValueError:
+        output_label.config(text="Please enter valid numbers.")
+        return
 
-    # Input function to enter what day the first of the month falls on
-    day_month_starts = int(input("What day does the month start on? (0=Sunday, 1=Monday, ..., 6=Saturday): "))
+    #calender contnt
+    calendar_text = "S  M  T  W  T  F  S\n"
 
-    #Header with the days of the weeks for numbers to fall under
-    print("S  M  T  W  T  F  S")
-    
-    #Ensure a new line starts from Sunday and after every 7 days
     counter = 0
 
+    #blank spaces before first day if it doesn't start on a sunday
+    calendar_text += "   " * day_month_starts
+    counter += day_month_starts
 
-    #Create blank spaces to the dates map out nicely and fall under each day in the header and are not joined together
-    for _ in range(day_month_starts):
-        print("   ", end="")
-        counter += 1
-
-    #Print under all the days of the week
+    #add the days of the month
     for day in range(1, days_in_month + 1):
-        print(f"{day:>2} ", end="")  
+        calendar_text += f"{day:>2} "
         counter += 1
 
-        #After printing 7 days,a new line will be made
+        # New line after 7 days
         if counter == 7:
-            print()
+            calendar_text += "\n"
             counter = 0
 
-    print()  
-
-#Run the calendar printer
-calendar_printer()
-
-#printer successfully runs
+    #output to GUI label
+    output_label.config(text=calendar_text)
 
 
+#creating a GUI
+
+root = tk.Tk()
+root.title("Calendar Printer")
+root.geometry("600x400")
+
+title_label = tk.Label(root, text="Calendar Printer", font=("Calibri", 18))
+title_label.pack(pady=10)
+
+frame = tk.Frame(root)
+frame.pack()
+
+tk.Label(frame, text="Days in Month:").grid(row=0, column=0, sticky="w")
+days_entry = tk.Entry(frame, width=10)
+days_entry.grid(row=0, column=1)
+
+tk.Label(frame, text="Enter Start Day (0 = Sun ... 6 = Sat):").grid(row=1, column=0, sticky="w")
+start_day_input = tk.Entry(frame, width=10)
+start_day_input.grid(row=1, column=1)
+
+create_button = tk.Button(root, text="Create Calendar", command=calendar_printer)
+create_button.pack(pady=10)
+
+output_label = tk.Label(root, text="", font=("Courier", 12), justify="left")
+output_label.pack()
+
+root.mainloop()
