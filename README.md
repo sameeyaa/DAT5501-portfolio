@@ -6,3 +6,4 @@ This ranges from:
 - implementing chi-squared into polynomial order graphs
 - creating calenders,printers and forecasting data
 - creating simple digital games
+- machine learning tree diagrams, classification and machine training
