@@ -3,6 +3,11 @@
 #Pet will engage with owner throughout the game
 #to advance my code, I will use tkinter to create a user interface
 
+#import necessary libraries
+import tkinter as tk
+from tkinter import messagebox
+import threading
+import time
 
 class DigitalPet:
     def __init__(self, name):
@@ -169,9 +174,16 @@ def main():
         pet.vitals()
 
 main()
-            
 
+#creating the user interface
+class VisualPet:
+    def __init__(self,root):
+        self.root = root
+        root.title("Digital Pet")
 
-                  
+        #ask user what they would like to name the pet
+        pet_name = "Pet"
+        self.pet = DigitalPet(pet_name)
+
 
 
