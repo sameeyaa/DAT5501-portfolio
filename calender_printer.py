@@ -35,7 +35,7 @@ def calendar_printer():
     print()  
 
 #Run the calendar printer
-calendar_printer()
+#calendar_printer()
 
 #printer successfully runs
 
