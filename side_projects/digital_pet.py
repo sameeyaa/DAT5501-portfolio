@@ -1,6 +1,13 @@
 #I am creating a digital pet, similar to a Tamagochi, which can be nurtured 
 #The pet will be able to be fed, played with and also put to bed
 #Pet will engage with owner throughout the game
+#to advance my code, I will use tkinter to create a user interface
+
+#import necessary libraries
+import tkinter as tk
+from tkinter import messagebox
+import threading
+import time
 
 class DigitalPet:
     def __init__(self, name):
@@ -167,9 +174,63 @@ def main():
         pet.vitals()
 
 main()
-            
 
+#creating the user interface
+class VisualPet:
+    def __init__(self,root):
+        self.root = root
+        root.title("Digital Pet")
 
-                  
+        #ask user what they would like to name the pet
+        self.pet = DigitalPet({self.name})
 
+        #show vitals
+        self.vitals_label = tk.Label(root, text = self.pet.vitals_text(), font = ("Calibri", 14))
+        self.vitals_label.pack(pady = 10)
+
+        #create option buttons
+        tk.Button(root, text = "Feed", command = self.feed_pet).pack()
+        tk.Button(root, text = "Exercise", command = self.exercise_pet).pack()
+        tk.Button(root, text = "Play", command = self.play_pet).pack()
+        tk.Button(root, text = "Sleep", command = self.pet_sleep).pack()
+        tk.Button(root, text = "Wake Up", command = self.pet_wake).pack()
+
+        #set a tick for the pet to age
+        self.update_tick()
+
+        #connecting buttons to the correct function
+        def feed_pet(self):
+            messagebox.showinfo("Pet", self.pet.feed())
+            self.update_vitals()
+
+        def play_pet(self):
+            messagebox.showinfo("Pet", self.pet.play())
+            self.update_vitals()
+
+        def exercise_pet(self):
+            messagebox.showinfo("Pet", self.pet.exercise())
+            self.update_vitals()
+
+        def pet_sleep(self):
+            messagebox.showinfo("Pet", self.pet.sleep())
+            self.update_vitals()
+
+        def pet_wake_up(self):
+            messagebox.showinfo("Pet", self.pet.wake_up())
+            self.update_vitals()
+
+         #constantly update the vitals to pets current status
+        def update_vitals(self):
+            self.vitals_label.config(text = self.pet.vitals_text())
+
+        #make the tick repeated
+        def update_tick(self):
+            self.pet.tick()
+            self.update_vitals()
+            self.root.after(5000, self.update_loop)
+
+#call the visual pet function
+root = tk.Tk()
+app = VisualPet(root)
+root.mainloop()
 
