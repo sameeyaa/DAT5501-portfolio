@@ -23,4 +23,8 @@ le = LabelEncoder()
 le.fit(y.iloc[:, 0])
 y_encoded = le.transform(y.iloc[:, 0])
 
+#training the decision tree
+clf = DecisionTreeClassifier(max_depth = 5, random_state= 50)
+clf.fit(X, y_encoded)
+
 
