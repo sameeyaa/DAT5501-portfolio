@@ -133,7 +133,7 @@ def create_folders_and_notes():
                         file.write(f"# Workstream: {meeting['workstream']}\n")
                         file.write(f"# Attendees:\n")
                         for attendee in meeting['attendees']:
-                            file.write(f" - {attendees}\n")
+                            file.write(f" - {Participant}\n")
     print("Folders as well as meeting notes have been created.")
 
 
