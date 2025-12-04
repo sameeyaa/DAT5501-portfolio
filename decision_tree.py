@@ -20,4 +20,7 @@ print(estimation_of_obesity_levels_based_on_eating_habits_and_physical_condition
 
 #set the target variables that are being analysed
 le = LabelEncoder()
+le.fit(y.iloc[:, 0])
+y_encoded = le.transform(y.iloc[:, 0])
+
 
